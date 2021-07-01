@@ -9,25 +9,31 @@
         overflow: hidden;
         padding: 1em;
         &_version {
-            height: 50px;
+            display: block;
+            padding: 1em 0;
             border-bottom: 1px solid @grey-separator;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            position: relative;
 
             color: @grey-primary;
             font-size: 14px;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
+            li {
+                margin-left: 23px;
+                font-weight: normal;
+            }
+
+            margin-bottom: 10px
+        }
+        label.docs__sidebar_version {
+            // The JS-enhanced version is a <label>, the plain-HTML
+            // version is a <div>.
+            text-align: center;
         }
         &_toc li {
             font-size: 14px;
             line-height: 24px;
-            margin-left: 23px;
+            li {
+                margin-left: 23px;
+            }
             margin-bottom: 10px;
             font-weight: normal;
             button {

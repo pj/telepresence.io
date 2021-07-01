@@ -7,7 +7,9 @@ import jsYAML from 'js-yaml';
 import url from 'url';
 
 import Layout from '../components/Layout';
+import Link from '../components/Link';
 import Release from '../components/ReleaseNotes/Release';
+
 import GithubIcon from '../images/github-icon.inline.svg';
 import { components } from '../components/Markdown';
 
@@ -118,6 +120,11 @@ const handleVersionChange = (event) => {
 export default function DocPage({ location, data, pageContext }) {
   const variables = jsYAML.safeLoad(data.variablesFile.internal.content);
 
+  const [isJSEnabled, setIsJSEnabled] = React.useState(false);
+  React.useEffect(() => {
+    setIsJSEnabled(true);
+  }, []);
+
   return (
     <Layout location={location}>
       <Helmet>
@@ -126,16 +133,28 @@ export default function DocPage({ location, data, pageContext }) {
       </Helmet>
       <div className="docs">
         <nav className="docs__sidebar">
-          <label className="docs__sidebar_version">
-            Version:
-            <select defaultValue="" onChange={handleVersionChange}>{ /* eslint-disable-line jsx-a11y/no-onchange */ }
-            {
-              pageContext.docinfo.peerVersions.reverse().map(([version, urlpath]) => (
-                <option key={version} value={urlpath || ""}>{version}</option>
-              ))
-            }
-            </select>
-          </label>
+          { isJSEnabled
+            ? <label className="docs__sidebar_version">
+                Version:
+                <select defaultValue="" onChange={handleVersionChange}>{ /* eslint-disable-line jsx-a11y/no-onchange */ }
+                  {
+                    pageContext.docinfo.peerVersions.reverse().map(([version, urlpath]) => (
+                      <option key={version} value={urlpath || ""}>{version}</option>
+                    ))
+                  }
+                </select>
+              </label>
+            : <div className="docs__sidebar_version">
+                Versions:
+                <ul>
+                  {
+                    pageContext.docinfo.peerVersions.reverse().map(([version, urlpath]) => (
+                      <li key={version}>{urlpath ? <Link to={urlpath}>{version}</Link> : version }</li>
+                    ))
+                  }
+                </ul>
+              </div>
+          }
           <LinkList className="docs__sidebar_toc"
                     rooturl={pageContext.docinfo.docrootURL}
                     items={jsYAML.safeLoad(template(data.sidebarFile.internal.content, variables))} />
