@@ -83,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       staticFiles: allFile(filter: {
-            extension: { in: [ "jpg", "png" ] }
+            extension: { in: [ "jpg", "png", "svg" ] }
       }) {
         edges {
           node {

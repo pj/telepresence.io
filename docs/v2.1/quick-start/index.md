@@ -4,4 +4,4 @@
 
 import TelepresenceQuickStartLanding from './TelepresenceQuickStartLanding'
 
-<TelepresenceQuickStartLanding/>
+<TelepresenceQuickStartLanding getStarted="demo-node/"/>

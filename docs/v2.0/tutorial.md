@@ -52,7 +52,7 @@ telepresence login
   git clone https://github.com/datawire/amb-code-quickstart-app.git
   ```
 
-2. Install [Edge Stack](../../../../../../products/edge-stack/) to use as an ingress controller for your cluster. We need an ingress controller to allow access to the web app from the internet.
+2. Install [Edge Stack](https://www.getambassador.io/products/edge-stack/) to use as an ingress controller for your cluster. We need an ingress controller to allow access to the web app from the internet.
 
   Change into the repo directory, then into `k8s-config`, and apply the YAML files to deploy Edge Stack.
 
@@ -99,7 +99,7 @@ Alternatively, you can use Telepresence's `intercept` command to proxy traffic b
 
   <Alert severity="info" variant="outlined">Run <code>telepresence dashboard</code> if you are already logged in and just need to reopen the dashboard.</Alert>
 
-2. In your terminal and run `telepresence list`.  This will connect to your cluster, install the [Traffic Manager](../reference/#architecture) to proxy the traffic, and return a list of services that Telepresence is able to intercept.
+2. In your terminal and run `telepresence list`.  This will connect to your cluster, install the [Traffic Manager](../reference/architecture) to proxy the traffic, and return a list of services that Telepresence is able to intercept.
 
 3. Navigate up one directory to the root of the repo then into `DataProcessingNodeService`. Install the Node.js dependencies and start the app passing the `blue` argument, which is used by the app to set the title and pod color in the diagram you saw earlier.
 

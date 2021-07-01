@@ -25,7 +25,7 @@ All HTTP/1.1 and HTTP/2 protocols can be intercepted. This includes:
 - gRPC
 - GraphQL
 
-If you need another protocol supported, please [drop us a line](../../../../feedback) to request it.
+If you need another protocol supported, please [drop us a line](https://www.getambassador.io/feedback) to request it.
 
 ** When using Telepresence to intercept a pod, are the Kubernetes cluster environment variables proxied to my local machine?**
 
@@ -93,7 +93,7 @@ The connection between your laptop and cluster is established via the standard `
 
 Currently GitHub is used to authenticate a user of Telepresence (triggered via the `telepresence login` command) and any viewers of a preview URL.
 
-More authentication mechanisms and identity provider support will be added soon. Please [let us know](../../../../feedback) which providers are the most important to you and your team in order for us to prioritize those.
+More authentication mechanisms and identity provider support will be added soon. Please [let us know](https://www.getambassador.io/feedback) which providers are the most important to you and your team in order for us to prioritize those.
 
 ** Is Telepresence open source?**
 
@@ -101,4 +101,4 @@ Telepresence will be open source soon, in the meantime it is free to download. W
 
 ** How do I share my feedback on Telepresence?**
 
-Your feedback is always appreciated and helps us build a product that provides as much value as possible for our community. You can chat with us directly on our [feedback page](../../../../feedback), or you can [join our Slack channel](https://a8r.io/Slack) to share your thoughts.
+Your feedback is always appreciated and helps us build a product that provides as much value as possible for our community. You can chat with us directly on our [feedback page](https://www.getambassador.io/feedback), or you can [join our Slack channel](https://a8r.io/Slack) to share your thoughts.
