@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import styles from './styles.module.less';
 
-import ThumbsUpIcon from '../../../static/images/doc-icons/thumbs.inline.svg';
-import ClipboardIcon from '../../../static/images/doc-icons/clipboard.inline.svg';
+import ThumbsUpIcon from './thumbs.inline.svg';
+import ClipboardIcon from './clipboard.inline.svg';
 
 const copyToClipboard = content => {
   const el = document.createElement('textarea');

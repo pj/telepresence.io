@@ -7,8 +7,8 @@ import styles from './styles.module.less';
 
 import CopyButton from './CopyButton';
 
-import TerminalIcon from '../../../static/images/doc-icons/terminal.inline.svg';
-import CodeIcon from '../../../static/images/doc-icons/code.inline.svg';
+import TerminalIcon from './terminal.inline.svg';
+import CodeIcon from './code.inline.svg';
 
 const ps1regex = /^(|\/ |\/ambassador |localhost|kubernetes|@minikube\|)[$#] /;
 
