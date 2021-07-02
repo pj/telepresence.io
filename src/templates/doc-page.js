@@ -10,7 +10,7 @@ import Layout from '../components/Layout';
 import Link from '../components/Link';
 import Release from '../components/ReleaseNotes/Release';
 
-import GithubIcon from '../images/github-icon.inline.svg';
+import GithubIcon from '../assets/images/github-icon.inline.svg';
 import { components } from '../components/Markdown';
 
 import '@fontsource/inter';
