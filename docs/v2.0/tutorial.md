@@ -77,7 +77,7 @@ telepresence login
 <table style="border-collapse: collapse; border: none; padding: 5px; line-height: 29px">
 <tr style="background:transparent; border: none; padding: 5px">
     <td style="border: none; padding: 5px; width:65%"><ol start="5"><li>Wait until all the pods start, then access the the Edgy Corp web app in your browser at <code>http://&lt;load-balancer-ip/&gt;</code>. Be sure you use <code>http</code>, not <code>https</code>! <br/>You should see the landing page for the web app with an architecture diagram. The web app is composed of three services, with the frontend <code>VeryLargeJavaService</code> dependent on the two backend services.</li></ol></td>
-    <td style="border: none; padding: 5px"><img src="../../images/tp-tutorial-1.png"/></td>
+    <td style="border: none; padding: 5px"><img src="../images/tp-tutorial-1.png"/></td>
 </tr>
 </table>
 
@@ -137,20 +137,20 @@ Alternatively, you can use Telepresence's `intercept` command to proxy traffic b
 <table style="border-collapse: collapse; border: none; padding: 5px; line-height: 29px">
 <tr style="background:transparent; border: none; padding: 5px">
     <td style="border: none; padding: 5px; width:65%"><ol start="5"><li>Open the preview URL in your browser to see the intercepted version of the app. The Node server on your laptop replies back to the cluster with the <span style="color:blue" class="bold">blue</span> option enabled; you will see a blue title and blue pod in the diagram. Remember that previously these elements were <span style="color:green" class="bold">green</span>.<br />You will also see a banner at the bottom on the page informing that you are viewing a preview URL with your name and org name.</li></ol></td>
-    <td style="border: none; padding: 5px"><img src="../../images/tp-tutorial-2.png"/></td>
+    <td style="border: none; padding: 5px"><img src="../images/tp-tutorial-2.png"/></td>
 </tr>
 </table>
 
 <table style="border-collapse: collapse; border: none; padding: 5px; line-height: 29px">
 <tr style="background:transparent; border: none; padding: 5px">
     <td style="border: none; padding: 5px; width:65%"><ol start="6"><li>Switch back in your browser to the dashboard page and refresh it to see your preview URL listed. Click the box to expand out options where you can disable authentication or remove the preview.<br/>If there were other developers in your organization also creating preview URLs, you would see them here as well.</li></ol></td>
-    <td style="border: none; padding: 5px"><img src="../../images/tp-tutorial-3.png"/></td>
+    <td style="border: none; padding: 5px"><img src="../images/tp-tutorial-3.png"/></td>
 </tr>
 </table>
 
 This diagram demonstrates the flow of requests using the intercept.  The laptop on the left visits the preview URL, the request is redirected to the cluster ingress, and requests to and from the `DataProcessingNodeService` by other pods are proxied to the developer laptop running Telepresence.
 
-![Intercept Architecture](../../images/tp-tutorial-4.png)
+![Intercept Architecture](../images/tp-tutorial-4.png)
 
 7. Clean up your environment by first typing `Ctrl+C` in the terminal running Node. Then stop the intercept with the `leave` command and `quit` to stop the daemon.  Finally, use `uninstall --everything` to remove the Traffic Manager and Agents from your cluster.
 
