@@ -6,7 +6,7 @@ description: "How Telepresence works to intercept traffic from your Kubernetes c
 
 <div class="docs-diagram-wrapper">
 
-![Telepresence Architecture](../../../../../images/documentation/telepresence-architecture.inline.svg)
+![Telepresence Architecture](../../images/telepresence-architecture.svg)
 
 </div>
 

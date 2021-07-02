@@ -14,7 +14,7 @@ It is recommended to use an empty development cluster for this guide.  You must 
 
 Finally, you will need the Telepresence CLI. Run the commands for your OS to install it and login to Ambassador Cloud in your browser. Follow the prompts to login with GitHub then select your organization.  You will be redirected to the dashboard; later you will manage your preview URLs here.
 
-### <img class="os-logo" src="../../images/apple.png"/> macOS
+### <img class="os-logo" src="../images/apple.png"/> macOS
 
 ```
 # 1. Download the latest binary (~60 MB):
@@ -30,7 +30,7 @@ telepresence login
 <Alert severity="info" variant="outlined">If you receive an error saying the developer cannot be verified, open <b>System Preferences → Security & Privacy → General</b>.  Click <b>Open Anyway</b> at the bottom to bypass the security block. Then retry the <code>telepresence login</code> command.</Alert>
 
 
-### <img class="os-logo" src="../../images/linux.png"/> Linux
+### <img class="os-logo" src="../images/linux.png"/> Linux
 
 ```
 # 1. Download the latest binary (~50 MB):
@@ -162,7 +162,7 @@ This diagram demonstrates the flow of requests using the intercept.  The laptop 
 
 8. Refresh the dashboard page again and you will see the intercept was removed after running the `leave` command.  Refresh the browser tab with the preview URL and you will see that it has been disabled.
 
-## <img class="os-logo" src="../../images/logo.png"/> What's Next?
+## <img class="os-logo" src="../images/logo.png"/> What's Next?
 
 Telepresence and preview URLS open up powerful possibilities for [collaborating](../howtos/preview-urls) with your colleagues and others outside of your organization.
 
