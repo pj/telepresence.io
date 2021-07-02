@@ -3,10 +3,10 @@ import url from 'url';
 
 import Link from '../Link';
 
-import BugIcon      from '@src/assets/icons/bug.inline.svg';
-import ChangeIcon   from '@src/assets/icons/change.inline.svg';
-import TadaIcon     from '@src/assets/icons/tada.inline.svg';
-import SecurityIcon from '@src/assets/icons/security.inline.svg';
+import BugIcon      from './bug.inline.svg';
+import ChangeIcon   from './change.inline.svg';
+import TadaIcon     from './tada.inline.svg';
+import SecurityIcon from './security.inline.svg';
 
 import styles from './releaseNotes.module.less';
 
