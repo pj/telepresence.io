@@ -15,7 +15,7 @@ export default function EasyLayout({
       site {
         siteMetadata {
           title
-          siteURL
+          siteUrl
         }
       }
     }
@@ -25,7 +25,7 @@ export default function EasyLayout({
     <Layout location={location}>
       <Helmet>
         <title>{title} | {data.site.siteMetadata.title}</title>
-        <link rel="canonical" href={`${data.site.siteMetadata.siteURL}${location.pathname}`} />
+        <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${location.pathname}`} />
         { description && <meta name="description" content={description} /> }
       </Helmet>
       {children}

@@ -15,7 +15,7 @@ process.env.NODE_ENV = process.env.OVERRIDE_NODE_ENV || process.env.NODE_ENV;
 module.exports = {
   siteMetadata: {
     title: "Telepresence",
-    siteURL: "https://www.telepresence.io"
+    siteUrl: "https://www.telepresence.io"
   },
   plugins: [
 
