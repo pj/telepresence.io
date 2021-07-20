@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { Link as ScrollLink } from 'react-scroll';
+import scrollUtils from 'react-scroll/modules/mixins/utils';
 import url from 'url';
 
 const Link = ({ children, ...props}) => {
@@ -17,8 +18,21 @@ const Link = ({ children, ...props}) => {
     return <a {...props}>{children}</a>;
   } else if (to.startsWith('#')) {
     // internal link to a fragment within this page
-    props.to = to.slice(1);
-    delete props.href;
+
+    props.to = to.slice(1); // JS-scroll
+    props.href = to;        // non-JS/copy-link
+
+    // Update the history/URL bar, since react-scroll disables that by default.
+    const origOnClick = props.onClick;
+    props.onClick = (ev) => {
+      if (origOnClick) {
+        origOnClick(ev);
+      }
+      if (scrollUtils.getHash() !== props.to) {
+        scrollUtils.updateHash(props.to, true);
+      }
+    };
+
     return <ScrollLink smooth={true} {...props}>{children}</ScrollLink>
   } else {
     // internal link to a different page
