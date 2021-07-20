@@ -22,6 +22,12 @@ const Link = ({ children, ...props}) => {
     return <ScrollLink smooth={true} {...props}>{children}</ScrollLink>
   } else {
     // internal link to a different page
+
+    // If you're thinking "wait, <GatsbyLink> doesn't support
+    // relative links, we need to do something about that!", then
+    // you're out-of-date.  Relative links were fixed in Gatsby
+    // 2.22.17.
+
     props.to = to;
     delete props.href;
     return <GatsbyLink {...props}>{children}</GatsbyLink>
