@@ -1,11 +1,25 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Link as GatsbyLink } from 'gatsby';
 import { Link as ScrollLink } from 'react-scroll';
 import scrollUtils from 'react-scroll/modules/mixins/utils';
 import url from 'url';
 
+function trimPrefix(str, prefix) {
+  return str?.startsWith(prefix) ? str.slice(prefix.length) : str;
+}
+
 const Link = ({ children, ...props}) => {
-  const to = props.to || props.href;
+  const to = trimPrefix(props.to || props.href, useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+    `).site.siteMetadata.siteUrl + '/');
+
   if (!to) {
     // not a link
     return <a {...props}>{children}</a>;
