@@ -33,7 +33,7 @@ push-docs: ## Publish ./ambassador to https://github.com/telepresenceio/docs
 push-docs: subtree-preflight
 	@PS4=; set -x; { \
 	  git remote add --no-tags remote-docs https://github.com/telepresenceio/docs && \
-	  git remote set-url --push remote-docs git@github.com:telepresenceio/docs && \
+	  git remote set-url --push remote-docs https://github.com/telepresenceio/docs && \
 	:; } || true
 	git fetch --prune remote-docs
 	$(foreach subdir,$(shell find docs -mindepth 1 -maxdepth 1 -type d|sort -V),\
